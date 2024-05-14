@@ -1,0 +1,12 @@
+5800 s. 6th st
+klamath falls
+
+
+MAY 13, 2024 03:23 PM
+
+TANK  PRODUCT                GALLONS   INCHES   WATER  DEG F   ULLAGE
+  1   Unleaded 12k              8566    62.00     0.0   58.6     3434
+  2   clear non eth             3293    48.22     0.0   57.1     2791
+  3   clear dsl                 6617    50.04     0.0   62.0     5065
+  4   super                     2986    55.22     0.0   58.2     1657
+  5   off road dsl              1835    31.60     0.0   56.5     4249

@@ -1,0 +1,13 @@
+173542 SHELL        
+1125 E. PINE ST.    
+CENTRAL POINT,OR.   
+STATION 120507      
+
+MAY 13, 2024  3:48 PM
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   REG PRIMARY              4881   45.10     0.0   64.2     4935
+  2   DIESEL                   5587   50.28     0.0   67.7     4229
+  3   NON ETH                  7344   63.03     0.0   62.7     2472
+  4   PREMIUM                  3977   38.70     0.0   61.9     5839

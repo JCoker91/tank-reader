@@ -1,0 +1,12 @@
+CORNING SHELL
+2176 SOLANO ST
+CORNING CA
+530-824-3413
+
+MAY 13, 2024  2:55 PM
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   PREMIUM                  3857   46.44     0.0   71.6     4164
+  3   REGULAR                  8190   61.65     0.0   70.4     3842
+  4   DIESEL                   2339   54.14     0.0   72.4     1672

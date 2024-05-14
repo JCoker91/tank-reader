@@ -1,0 +1,13 @@
+ASHLAND 76    
+2495 HWY 66
+ASHLAND OR
+
+
+MAY 13, 2024  3:29 PM
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   UNLEADED                 7887   58.73     0.0   65.2     4113
+  2   SUPREME                  2271   52.40     0.0   63.6     1729
+  3   CLEAR ETHN               4342   50.36     0.0   61.8     3658
+  4   DIESEL                   4325   64.14     0.9   65.4     1675
