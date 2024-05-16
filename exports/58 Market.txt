@@ -1,0 +1,13 @@
+OAKRIDGE 76
+47686 HWY 58
+541-782-3909
+
+
+MAY 16, 2024  8:58 AM
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   UNL                      5304   42.84     0.0   55.8     6765
+  2   V POWER                  2912   46.61     0.0   56.5     3031
+  3   DIESEL                   5090   41.73     0.7   56.1     6896
+  4   UNL-2                    2647   42.94     1.0   55.4     3357

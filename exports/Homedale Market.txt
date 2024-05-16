@@ -1,0 +1,13 @@
+COUNTRY VILLA       
+4449 HOMEDALE       
+KLAMATH FALLS,OR    
+                    
+
+MAY 16, 2024  8:48
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   PREM UNL                 1780   43.40     0.0   56.5     2220
+  2   NON ETHANOL              1739   42.62     0.0   55.5     2261
+  3   DIESEL                   2768   62.05     0.9   59.1     1232
+  4   REG UNLEADED             8490   63.28     0.8   59.3     3510

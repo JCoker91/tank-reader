@@ -1,0 +1,95 @@
+INFO::tank_reader::tank_reader.py::main::Running in mode: Production
+INFO::data_loader::data_loader.py::load_json_file::Loading data from file: data/fb_tanks.json
+INFO::data_loader::data_loader.py::load_json_file::Successfully loaded and verified data from data/fb_tanks.json
+INFO::tank_reader::tank_reader.py::main::Retrieving data from 58 Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.100.56 on port 10001
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.100.56 10001>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.100.56
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/58 Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/58 Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for 58 Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Bly Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.105.38 on port 10002
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.100.56 10001>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.105.38 10002>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.105.38
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Bly Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Bly Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Bly Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Corning Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.113.56 on port 10001
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.105.38 10002>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.113.56 10001>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.113.56
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Corning Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Corning Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Corning Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Hines Truck Stop....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.104.56 on port 10001
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.113.56 10001>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.104.56 10001>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.104.56
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Hines Truck Stop.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Hines Truck Stop.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Hines Truck Stop.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Homedale Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.115.56 on port 10001
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.104.56 10001>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.115.56 10001>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.115.56
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Homedale Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Homedale Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Homedale Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Madison Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.120.38 on port 10002
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.115.56 10001>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.120.38 10002>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.120.38
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Madison Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Madison Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Madison Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Ashland Hills Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.119.56 on port 10001
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.120.38 10002>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.119.56 10001>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.119.56
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Ashland Hills Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Ashland Hills Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Ashland Hills Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Pine Street Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host 10.30.127.56 on port 10001
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.119.56 10001>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 10.30.127.56 10001>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to 10.30.127.56
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Pine Street Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Pine Street Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Pine Street Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from Ashland Street Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host fbashlandhillsmkt.edstaub.org on port 7218
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 10.30.127.56 10001>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 68.186.27.81 7218>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to fbashlandhillsmkt.edstaub.org
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/Ashland Street Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/Ashland Street Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for Ashland Street Market.
+INFO::tank_reader::tank_reader.py::main::Retrieving data from 97 Market....
+INFO::telnet_connector::telnet_connector.py::get_tank_data::Getting tank data for host fbkf97mkt.edstaub.org on port 7218
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 68.186.27.81 7218>
+INFO::client_base::client_base.py::connection_made::Connected to <Peer 71.89.218.217 7218>
+INFO::telnet_connector::telnet_connector.py::open_connection::Successfully established connection to fbkf97mkt.edstaub.org
+INFO::telnet_connector::telnet_connector.py::retrieve_data::Successfully received response received from host.
+INFO::data_loader::data_loader.py::write_list_to_file::Writing contents to exports/97 Market.txt...
+INFO::data_loader::data_loader.py::write_list_to_file::Successfully wrote contents to exports/97 Market.txt
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for 97 Market.
+INFO::tank_reader::tank_reader.py::main::Process complete.
+INFO::tank_reader::tank_reader.py::main::Successfully wrote data for 10 out of 10 tanks.
+INFO::client_base::client_base.py::connection_lost::Connection closed to <Peer 71.89.218.217 7218>

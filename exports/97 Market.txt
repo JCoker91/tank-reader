@@ -1,0 +1,12 @@
+NE
+CHEVRON
+3730 HWY 97N
+
+
+MAY 16, 2024  8:51 AM
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   UNLEAD                   6569   49.79     0.0   57.1     5113
+  2   DIESEL                   1804   31.59     0.0   57.1     4280
+  3   SUPER                    1704   30.36     0.0   53.7     4380

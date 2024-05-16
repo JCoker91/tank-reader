@@ -1,0 +1,71 @@
+[
+  {
+    "Location": "58 Market",
+    "Host": "10.30.100.56",
+    "Port": 10001,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Bly Market",
+    "Host": "10.30.105.38",
+    "Port": 10002,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Corning Market",
+    "Host": "10.30.113.56",
+    "Port": 10001,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Hines Truck Stop",
+    "Host": "10.30.104.56",
+    "Port": 10001,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Homedale Market",
+    "Host": "10.30.115.56",
+    "Port": 10001,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Madison Market",
+    "Host": "10.30.120.38",
+    "Port": 10002,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Ashland Hills Market",
+    "Host": "10.30.119.56",
+    "Port": 10001,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Pine Street Market",
+    "Host": "10.30.127.56",
+    "Port": 10001,
+    "Command": "200"
+  },
+
+  {
+    "Location": "Ashland Street Market",
+    "Host": "fbashlandhillsmkt.edstaub.org",
+    "Port": 7218,
+    "Command": "200"
+  },
+
+  {
+    "Location": "97 Market",
+    "Host": "fbkf97mkt.edstaub.org",
+    "Port": 7218,
+    "Command": "200"
+  }
+]

@@ -1,0 +1,14 @@
+BLY FASTBREAK       
+61430 HWY.140 EAST  
+BLY,OR.97622        
+                    
+
+MAY 16, 2024  8:42 AM
+
+TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
+
+  1   SUPER UNLEADED           1778   50.34     0.0   52.6     2279
+  2   UNLEADED CENTER          3099   79.62     0.0   54.3      958
+  3   UNLEADED WEST            5550   72.09     0.0   56.9     2565
+  4   HI-WAY DIESEL            5375   70.13     0.0   56.4     2740
+  5   OFF-ROAD DYED DIESEL     2431   64.48     0.8   56.5     1626
