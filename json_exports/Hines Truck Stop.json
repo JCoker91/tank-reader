@@ -1,0 +1,47 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "PREM",
+        "GALLONS": "4907",
+        "INCHES": "84.20",
+        "WATER": "0.0",
+        "DEG F": "58.1",
+        "ULLAGE": "1125"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "UNLEADED",
+        "GALLONS": "9259",
+        "INCHES": "79.76",
+        "WATER": "0.9",
+        "DEG F": "61.4",
+        "ULLAGE": "2764"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "CAR DIESEL",
+        "GALLONS": "8497",
+        "INCHES": "73.65",
+        "WATER": "0.8",
+        "DEG F": "61.4",
+        "ULLAGE": "3526"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "TRK DIESEL",
+        "GALLONS": "8489",
+        "INCHES": "73.58",
+        "WATER": "0.8",
+        "DEG F": "61.8",
+        "ULLAGE": "3534"
+    },
+    {
+        "TANK": "5",
+        "PRODUCT": "",
+        "GALLONS": "0",
+        "INCHES": "13.22",
+        "WATER": "",
+        "DEG F": "54.3",
+        "ULLAGE": "0"
+    }
+]

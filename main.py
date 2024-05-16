@@ -65,8 +65,19 @@ async def main():
             failed_list.append(tank['Location'])
             continue
         logger.info("Successfully wrote data for %s.", tank['Location'])
-        success_count += 1
-    logger.info("Process complete.")
+        logger.info("Writing data to JSON file...")
+        try:
+            dl.write_to_json(f"{Settings.EXPORT_FOLDER}/{tank['Location']}.txt",
+                             f"{Settings.JSON_EXPORT_FOLDER}/{tank['Location']}.json")
+            success_count += 1
+        except CriticalError as e:
+            logger.critical("Critical Error: %s", e)
+            failed_list.append(tank['Location'])
+            continue
+        except SimpleError as e:
+            logger.error("Failed to write data to JSON file: %s", e)
+            failed_list.append(tank['Location'])
+            continue
     logger.info("Successfully wrote data for %s out of %s tanks.", success_count, len(tank_data))
     if len(failed_list) > 0:
         logger.warning("Failed to write data for %s tanks.", len(tank_data) - success_count)
@@ -91,3 +102,4 @@ if __name__ == '__main__':
     root_logger.debug("Log Folder: %s", Settings.LOG_FOLDER)
     root_logger.debug("Export Folder: %s", Settings.EXPORT_FOLDER)
     asyncio.run(main())
+    root_logger.info("Process complete.")

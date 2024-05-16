@@ -1,0 +1,47 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "SUPER UNLEADED",
+        "GALLONS": "1770",
+        "INCHES": "50.16",
+        "WATER": "0.0",
+        "DEG F": "52.7",
+        "ULLAGE": "2287"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "UNLEADED CENTER",
+        "GALLONS": "3099",
+        "INCHES": "79.61",
+        "WATER": "0.0",
+        "DEG F": "54.4",
+        "ULLAGE": "958"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "UNLEADED WEST",
+        "GALLONS": "5102",
+        "INCHES": "67.09",
+        "WATER": "0.0",
+        "DEG F": "56.9",
+        "ULLAGE": "3013"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "HI-WAY DIESEL",
+        "GALLONS": "5206",
+        "INCHES": "68.24",
+        "WATER": "0.0",
+        "DEG F": "56.4",
+        "ULLAGE": "2909"
+    },
+    {
+        "TANK": "5",
+        "PRODUCT": "OFF-ROAD DYED DIESEL",
+        "GALLONS": "2388",
+        "INCHES": "63.53",
+        "WATER": "0.8",
+        "DEG F": "56.3",
+        "ULLAGE": "1669"
+    }
+]

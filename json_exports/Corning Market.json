@@ -1,0 +1,29 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "PREMIUM",
+        "GALLONS": "3945",
+        "INCHES": "47.26",
+        "WATER": "0.0",
+        "DEG F": "70.9",
+        "ULLAGE": "4076"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "REGULAR",
+        "GALLONS": "8599",
+        "INCHES": "64.35",
+        "WATER": "0.0",
+        "DEG F": "69.0",
+        "ULLAGE": "3433"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "DIESEL",
+        "GALLONS": "2603",
+        "INCHES": "59.18",
+        "WATER": "0.0",
+        "DEG F": "72.4",
+        "ULLAGE": "1408"
+    }
+]

@@ -3,12 +3,12 @@ ETA
 HINES OR
 
 
-MAY 15, 2024  8:45 PM
+MAY 16, 2024  3:04 AM
 
 TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
 
-  1   PREM                     4052   70.69     0.0   56.5     1980
-  2   UNLEADED                 7536   66.15     0.9   59.5     4487
-  3   CAR DIESEL               9147   78.84     0.8   61.5     2876
-  4   TRK DIESEL               9176   79.08     0.8   61.9     2847
-  5                               0   13.21           54.4        0
+  1   PREM                     4907   84.20     0.0   58.1     1125
+  2   UNLEADED                 9259   79.76     0.9   61.4     2764
+  3   CAR DIESEL               8497   73.65     0.8   61.4     3526
+  4   TRK DIESEL               8489   73.58     0.8   61.8     3534
+  5                               0   13.22           54.3        0

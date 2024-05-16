@@ -58,6 +58,85 @@ class DataLoader:
             self.logger.error("Provided file path not found: %s", file_name)
             raise SimpleError("Provided file path not found.") from e
 
+    def write_to_json(self, file: str, export_file_name: str) -> None:
+        '''Parses the text from tank file and writes it to json file'''
+        data = []
+        self.logger.info("Loading data from file: %s", file)
+        try:
+            with open(file, mode='r', encoding='utf-8') as f:
+                data = f.readlines()
+            self.logger.info("Successfully loaded data from file: %s", file)
+        except FileNotFoundError as e:
+            self.logger.critical("Data file not found.")
+            raise SimpleError("Data file not found.") from e
+        self.logger.debug("Data loaded from file.")
+        self.logger.debug("Begin listing rows received:")
+        for row in data:
+            self.logger.debug("%s", row)
+        self.logger.debug("End listing rows from response")
+        remove_rows = 0
+        for j in data:
+            if j[:4] == 'TANK':
+                self.logger.debug("Header row found at row %s", remove_rows)
+                break
+            remove_rows += 1
+        data = data[remove_rows:]
+        self.logger.debug("Data cleaned up. Begin listing rows in cleaned data:")
+        for row in data:
+            self.logger.debug("%s", row)
+        self.logger.debug("End listing rows from cleaned data")
+        try:
+            header_row = data[0]
+        except IndexError as e:
+            self.logger.error("No data found in file.")
+            raise SimpleError("No data found in file.") from e
+        self.logger.debug("Header row: %s", header_row)
+        headers = [
+            'TANK',
+            'PRODUCT',
+            'GALLONS',
+            'INCHES',
+            'WATER',
+            'DEG F',
+            'ULLAGE'
+        ]
+        self.logger.debug("Headers: %s", headers)
+        header_indexes = {}
+        column_width = {}
+        for index in headers:
+            header_indexes[index] = header_row.index(index)
+        self.logger.debug("Header Indexes found at the following: ")
+        for key, value in header_indexes.items():
+            self.logger.debug("%s: %s", key, value)
+
+        headers.reverse()
+        current_count = len(header_row)
+        for index in headers:
+            column_width[index] = current_count - header_indexes[index]
+            current_count = header_indexes[index]
+        headers.reverse()
+        self.logger.debug("Column Widths found at the following: ")
+        for key, value in column_width.items():
+            self.logger.debug("%s: %s", key, value)
+        json_data = []
+        data_entries = {}
+        for row in data[1:]:
+            if len(row) == len(header_row):
+                for index in headers:
+                    value = row[header_indexes[index]:header_indexes[index]+column_width[index]].strip()
+                    data_entries[index] = value
+                copied_data = data_entries.copy()
+                self.logger.debug("Data Entry Added: %s", copied_data)
+                json_data.append(copied_data)
+        self.logger.info("Successfully parsed data from file.")
+        try:
+            with open(export_file_name, mode='w', encoding='utf-8') as f:
+                json.dump(json_data, f, indent=4)
+            self.logger.info("Successfully wrote data to %s", export_file_name)
+        except FileNotFoundError as e:
+            self.logger.error("File path not found: %s", export_file_name)
+            raise SimpleError("File path not found.") from e
+
 
 if __name__ == '__main__':
     with open('data/test_tanks.json', 'r', encoding='utf-8') as fi:

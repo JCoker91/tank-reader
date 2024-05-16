@@ -1,0 +1,38 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "PREM UNL",
+        "GALLONS": "1747",
+        "INCHES": "42.77",
+        "WATER": "0.0",
+        "DEG F": "56.6",
+        "ULLAGE": "2253"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "NON ETHANOL",
+        "GALLONS": "1686",
+        "INCHES": "41.64",
+        "WATER": "0.0",
+        "DEG F": "55.6",
+        "ULLAGE": "2314"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "DIESEL",
+        "GALLONS": "2445",
+        "INCHES": "55.84",
+        "WATER": "0.9",
+        "DEG F": "58.9",
+        "ULLAGE": "1555"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "REG UNLEADED",
+        "GALLONS": "7350",
+        "INCHES": "55.94",
+        "WATER": "0.8",
+        "DEG F": "59.2",
+        "ULLAGE": "4650"
+    }
+]

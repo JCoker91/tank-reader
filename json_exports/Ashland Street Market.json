@@ -1,0 +1,38 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "UNLEADED",
+        "GALLONS": "5845",
+        "INCHES": "46.05",
+        "WATER": "0.0",
+        "DEG F": "63.6",
+        "ULLAGE": "6155"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "SUPREME",
+        "GALLONS": "1506",
+        "INCHES": "38.10",
+        "WATER": "0.0",
+        "DEG F": "63.5",
+        "ULLAGE": "2494"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "CLEAR ETHN",
+        "GALLONS": "3672",
+        "INCHES": "44.16",
+        "WATER": "0.0",
+        "DEG F": "62.5",
+        "ULLAGE": "4328"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "DIESEL",
+        "GALLONS": "2043",
+        "INCHES": "35.36",
+        "WATER": "1.1",
+        "DEG F": "65.2",
+        "ULLAGE": "3957"
+    }
+]

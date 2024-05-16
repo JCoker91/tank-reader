@@ -14,3 +14,4 @@ class Settings:
     MODE = Mode.PROD
     PROD_FILE = 'fb_tanks.json'
     TEST_FILE = 'test_tanks.json'
+    JSON_EXPORT_FOLDER = 'json_exports'

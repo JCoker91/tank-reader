@@ -3,12 +3,12 @@ BLY FASTBREAK
 BLY,OR.97622        
                     
 
-MAY 16, 2024  8:42 AM
+MAY 16, 2024  3:01 PM
 
 TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
 
-  1   SUPER UNLEADED           1778   50.34     0.0   52.6     2279
-  2   UNLEADED CENTER          3099   79.62     0.0   54.3      958
-  3   UNLEADED WEST            5550   72.09     0.0   56.9     2565
-  4   HI-WAY DIESEL            5375   70.13     0.0   56.4     2740
-  5   OFF-ROAD DYED DIESEL     2431   64.48     0.8   56.5     1626
+  1   SUPER UNLEADED           1770   50.16     0.0   52.7     2287
+  2   UNLEADED CENTER          3099   79.61     0.0   54.4      958
+  3   UNLEADED WEST            5102   67.09     0.0   56.9     3013
+  4   HI-WAY DIESEL            5206   68.24     0.0   56.4     2909
+  5   OFF-ROAD DYED DIESEL     2388   63.53     0.8   56.3     1669

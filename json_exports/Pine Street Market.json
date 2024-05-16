@@ -1,0 +1,38 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "REG PRIMARY",
+        "GALLONS": "6018",
+        "INCHES": "53.17",
+        "WATER": "0.0",
+        "DEG F": "65.2",
+        "ULLAGE": "3798"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "DIESEL",
+        "GALLONS": "6515",
+        "INCHES": "56.99",
+        "WATER": "0.0",
+        "DEG F": "66.6",
+        "ULLAGE": "3301"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "NON ETH",
+        "GALLONS": "7152",
+        "INCHES": "61.55",
+        "WATER": "0.0",
+        "DEG F": "64.1",
+        "ULLAGE": "2664"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "PREMIUM",
+        "GALLONS": "3314",
+        "INCHES": "33.90",
+        "WATER": "0.0",
+        "DEG F": "62.8",
+        "ULLAGE": "6502"
+    }
+]

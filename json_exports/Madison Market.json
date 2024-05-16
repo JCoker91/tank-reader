@@ -1,0 +1,47 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "Unleaded 12k",
+        "GALLONS": "8195",
+        "INCHES": "59.61",
+        "WATER": "0.0",
+        "DEG F": "60.5",
+        "ULLAGE": "3805"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "clear non eth",
+        "GALLONS": "3064",
+        "INCHES": "45.66",
+        "WATER": "0.0",
+        "DEG F": "57.6",
+        "ULLAGE": "3020"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "clear dsl",
+        "GALLONS": "9038",
+        "INCHES": "65.21",
+        "WATER": "0.0",
+        "DEG F": "63.9",
+        "ULLAGE": "2644"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "super",
+        "GALLONS": "1938",
+        "INCHES": "39.05",
+        "WATER": "0.0",
+        "DEG F": "58.4",
+        "ULLAGE": "2705"
+    },
+    {
+        "TANK": "5",
+        "PRODUCT": "off road dsl",
+        "GALLONS": "906",
+        "INCHES": "19.54",
+        "WATER": "0.0",
+        "DEG F": "57.6",
+        "ULLAGE": "5178"
+    }
+]

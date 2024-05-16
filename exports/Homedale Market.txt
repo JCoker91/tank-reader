@@ -3,11 +3,11 @@ COUNTRY VILLA
 KLAMATH FALLS,OR    
                     
 
-MAY 16, 2024  8:48
+MAY 16, 2024 15:06
 
 TANK  PRODUCT               GALLONS  INCHES   WATER  DEG F   ULLAGE
 
-  1   PREM UNL                 1780   43.40     0.0   56.5     2220
-  2   NON ETHANOL              1739   42.62     0.0   55.5     2261
-  3   DIESEL                   2768   62.05     0.9   59.1     1232
-  4   REG UNLEADED             8490   63.28     0.8   59.3     3510
+  1   PREM UNL                 1747   42.77     0.0   56.6     2253
+  2   NON ETHANOL              1686   41.64     0.0   55.6     2314
+  3   DIESEL                   2445   55.84     0.9   58.9     1555
+  4   REG UNLEADED             7350   55.94     0.8   59.2     4650

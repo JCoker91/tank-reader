@@ -2,11 +2,11 @@
 klamath falls
 
 
-MAY 16, 2024 09:08 AM
+MAY 16, 2024 03:27 PM
 
 TANK  PRODUCT                GALLONS   INCHES   WATER  DEG F   ULLAGE
-  1   Unleaded 12k              4534    36.88     0.0   57.9     7466
-  2   clear non eth             3121    46.29     0.0   57.5     2963
-  3   clear dsl                 9658    69.54     0.0   63.9     2024
-  4   super                     2093    41.45     0.0   58.2     2550
-  5   off road dsl               938    19.99     0.0   57.8     5146
+  1   Unleaded 12k              8195    59.61     0.0   60.5     3805
+  2   clear non eth             3064    45.66     0.0   57.6     3020
+  3   clear dsl                 9038    65.21     0.0   63.9     2644
+  4   super                     1938    39.05     0.0   58.4     2705
+  5   off road dsl               906    19.54     0.0   57.6     5178

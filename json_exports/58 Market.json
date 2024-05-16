@@ -1,0 +1,38 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "UNL",
+        "GALLONS": "4975",
+        "INCHES": "40.79",
+        "WATER": "0.0",
+        "DEG F": "56.1",
+        "ULLAGE": "7094"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "V POWER",
+        "GALLONS": "2865",
+        "INCHES": "46.01",
+        "WATER": "0.0",
+        "DEG F": "56.7",
+        "ULLAGE": "3078"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "DIESEL",
+        "GALLONS": "5089",
+        "INCHES": "41.72",
+        "WATER": "0.7",
+        "DEG F": "56.2",
+        "ULLAGE": "6897"
+    },
+    {
+        "TANK": "4",
+        "PRODUCT": "UNL-2",
+        "GALLONS": "2483",
+        "INCHES": "40.90",
+        "WATER": "1.0",
+        "DEG F": "55.6",
+        "ULLAGE": "3521"
+    }
+]

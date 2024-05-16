@@ -1,0 +1,29 @@
+[
+    {
+        "TANK": "1",
+        "PRODUCT": "UNLEAD",
+        "GALLONS": "9816",
+        "INCHES": "70.75",
+        "WATER": "0.0",
+        "DEG F": "58.5",
+        "ULLAGE": "1866"
+    },
+    {
+        "TANK": "2",
+        "PRODUCT": "DIESEL",
+        "GALLONS": "4800",
+        "INCHES": "66.14",
+        "WATER": "0.0",
+        "DEG F": "63.7",
+        "ULLAGE": "1284"
+    },
+    {
+        "TANK": "3",
+        "PRODUCT": "SUPER",
+        "GALLONS": "3914",
+        "INCHES": "55.36",
+        "WATER": "0.0",
+        "DEG F": "58.3",
+        "ULLAGE": "2170"
+    }
+]
