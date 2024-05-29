@@ -78,6 +78,7 @@ class TelnetConnector:
             try:
                 response = await self.retrieve_data(command)
                 content = response.decode()
+                content = content.replace('\x01' + command, '').replace('\x03', '')
                 self.logger.debug("Response decoded")
                 return content
             except CriticalError as e:

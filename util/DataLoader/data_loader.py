@@ -11,6 +11,117 @@ class DataLoader:
     def __init__(self):
         self.logger = logging.getLogger()
 
+    def parse_full_string(self, content: str, command: str) -> dict:
+        '''Parses the full string returned from the telnet command'''
+        # command = "i20100"
+        start_char = "\x01"
+        end_char = "\x03"
+        fixed_data_length = 65
+        content = content.replace(start_char,
+                                  "").replace(end_char,
+                                              "").replace(command,
+                                                          "").split("&&")[0]
+        final_data = {'date': content[0:10], 'data': []}
+        content = content[10:]
+        data_strings = []
+        while len(content) > 0:
+            data_strings.append(content[0:fixed_data_length])
+            content = content[fixed_data_length:]
+        for data in data_strings:
+            json_data = self.parse_data_string(data)
+            final_data['data'].append(json_data)
+        return final_data
+
+    def parse_data_string(self, content: str) -> dict:
+        '''Parses a string from a single tank'''
+        tank_data = {}
+        data_fields = [
+            'Volume',
+            'TC Volume',
+            'Ullage',
+            'Height',
+            'Water',
+            'Temperature',
+            'Water Volume'
+        ]
+        tank_data['tank_number'] = content[0:2]
+        tank_data['product_number'] = content[2:3]
+        tank_data['tank_status'] = content[3:7]
+        for index, field in enumerate(data_fields):
+            ieee = content[9 + (index * 8): 9 + (index * 8) + 8]
+            tank_data[field] = self.parse_ascii_floating_point(ieee)
+        return tank_data
+
+    def parse_ascii_floating_point(self, hex_num: str) -> float:
+        '''
+        Converts the floating point hex number to a decimal based off the format provided by
+        TLS-300, TLS-350, and TLS-350R
+
+        I am using bitwise operations to extract the values from the hex number. The format is as
+        follows:
+
+        -------------------------------------------------------------------------
+        Byte    |       1       |       2       |       3       |       4       |
+        -------------------------------------------------------------------------
+                | S EEE | EEEE  | E MMM | MMMM  | MMMM  | MMMM  | MMMM  | MMMM  |
+        -------------------------------------------------------------------------
+        Nibble  |   1   |   2   |   3   |   4   |   5   |   6   |   7   |   8   |
+        -------------------------------------------------------------------------
+
+        S is the sign bit (0 if positive, 1 if negative).
+
+        EEE EEEE E represents the 2's exponent. It is a 2's complement value biased by 127 (7F
+        Hex). The exponent can be determined by subtracting 127 from the value of the E field and
+        raising 2 to the resulting power.
+
+        MMM MMMM MMMM MMMM MMMM MMMM represents the 23-bit mantissa. Since
+        the mantissa describes a value which is greater than or equal to 1.0 and less than 2.0,
+        the 24th bit is always assumed to be equal to 1 and is not transmitted or stored.
+        The value of the mantissa can be determined by dividing the value of the M field by
+        8,388,608 (223) and adding 1.0.
+
+        The complete value of the floating point number can then be determined by multiplying the
+        exponent by the mantissa and attaching the appropriate positive or negative sign.
+
+        By convention, 00 00 00 00 represents the value 0.0 even though it actually converts to
+        5.8775 x 10-39.
+
+        The eight "nibbles" are transmitted in sequence from 1 through 8 as shown
+        in section 6.3.1.2.
+        '''
+        self.logger.debug("Hex Number received: %s", hex_num)
+        try:
+            bit_number = int(hex_num, 16)
+            self.logger.debug("Bit Number: %s", bit_number)
+        except ValueError as e:
+            raise CriticalError("Invalid hex number provided.") from e
+
+        # Byte format. Shifting the bits to the right to get the value of the bits.
+        format_b = {
+            'S': (31, 1, 0b1),
+            'E': (23, 255, 0b11111111),
+            'M': (0, 8388607, 0b11111111111111111111111)
+            }
+        # Extracting the values from the bit number
+        # S is the sign bit (0 if positive, 1 if negative).
+        s_value = -1 if (bit_number >> format_b['S'][0]) & format_b['S'][1] == 1\
+            else 1
+        self.logger.debug("Sign Value: %s", s_value)
+        # EEE EEEE E represents the 2's exponent. It is a 2's complement value biased by 127 (7F
+        # Hex). The exponent can be determined by subtracting 127 from the value of the E field and
+        # raising 2 to the resulting power.
+        e_value = (bit_number >> format_b['E'][0]) & format_b['E'][1]
+        self.logger.debug("Exponent Value: %s", e_value)
+        # MMM MMMM MMMM MMMM MMMM MMMM represents the 23-bit mantissa. Since
+        # the mantissa describes a value which is greater than or equal to 1.0 and less than 2.0,
+        # the 24th bit is always assumed to be equal to 1 and is not transmitted or stored.
+        m_value = (bit_number >> format_b['M'][0]) & format_b['M'][1]
+        self.logger.debug("Mantissa Value: %s", m_value)
+
+        decimal_value = s_value * (2 ** (e_value - 127)) * (m_value / 8388608 + 1)
+        self.logger.debug("Decimal Value: %s", decimal_value)
+        return decimal_value
+
     def verify_file_spec(self, data: dict) -> None:
         '''Verifies that the data is in the correct format'''
         assert 'Host' in data[0].keys()
@@ -38,6 +149,21 @@ class DataLoader:
         except json.JSONDecodeError as e:
             self.logger.critical("Data file is not a valid JSON file.")
             raise CriticalError("Data file is not a valid JSON file.") from e
+
+    def write_string_to_file(self, data: str, file_name: str) -> None:
+        ''''Writes a string to a file'''
+        self.logger.debug("Data received: %s", data)
+        self.logger.info("Writing contents to %s...", file_name)
+        try:
+            with open(f"{file_name}", mode='w', encoding='utf-8') as file:
+                file.write(data)
+            self.logger.info("Successfully wrote contents to %s", file_name)
+        except PermissionError as e:
+            self.logger.error("Permission denied to write to file: %s", file_name)
+            raise CriticalError("Permission denied to write to file.") from e
+        except FileNotFoundError as e:
+            self.logger.error("Provided file path not found: %s", file_name)
+            raise SimpleError("Provided file path not found.") from e
 
     def write_list_to_file(self, data: List[str], file_name: str) -> None:
         '''Writes a list of strings to a file'''
@@ -137,10 +263,16 @@ class DataLoader:
             self.logger.error("File path not found: %s", export_file_name)
             raise SimpleError("File path not found.") from e
 
-
-if __name__ == '__main__':
-    with open('data/test_tanks.json', 'r', encoding='utf-8') as fi:
-        datas = json.load(fi)
-        assert 'Host' in datas[0].keys()
-        assert 'Location' in datas[0].keys()
-        print(len(datas))
+    def write_to_json_from_dict(self, data: dict, export_file_name: str) -> None:
+        '''Writes a dictionary to a json file'''
+        self.logger.info("Writing data to JSON file: %s", export_file_name)
+        try:
+            with open(export_file_name, mode='w', encoding='utf-8') as f:
+                json.dump(data, f, indent=4)
+            self.logger.info("Successfully wrote data to %s", export_file_name)
+        except FileNotFoundError as e:
+            self.logger.error("File path not found: %s", export_file_name)
+            raise SimpleError("File path not found.") from e
+        except json.JSONDecodeError as e:
+            self.logger.error("Failed to write data to JSON file.")
+            raise SimpleError("Failed to write data to JSON file.") from e

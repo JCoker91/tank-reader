@@ -35,6 +35,10 @@ async def main():
     failed_list = []
     for tank in tank_data:
         logger.info("Retrieving data from %s....", tank['Location'])
+        export_text_file = f"{Settings.EXPORT_FOLDER}/{tank['Location']}.txt"
+        export_json_file = f"{Settings.JSON_EXPORT_FOLDER}/{tank['Location']}.json"
+
+        # Get Tank Data
         try:
             response_content = await telnet_connector.get_tank_data(host=tank['Host'],
                                                                     port=tank['Port'],
@@ -53,9 +57,12 @@ async def main():
             failed_list.append(tank['Location'])
             continue
         try:
-            data = response_content.split('\r\n')
-            data = data[2:len(data)-2]
-            dl.write_list_to_file(data, f"{Settings.EXPORT_FOLDER}/{tank['Location']}.txt")
+            # data = response_content.split('\r\n')
+            # data = data[2:len(data)-2]
+            # dl.write_list_to_file(response_content,
+            #                       f"{Settings.EXPORT_FOLDER}/{tank['Location']}.txt")
+            dl.write_string_to_file(response_content,
+                                    export_text_file)
         except SimpleError as e:
             logger.error("Failed to write data to file: %s", e)
             failed_list.append(tank['Location'])
@@ -66,9 +73,17 @@ async def main():
             continue
         logger.info("Successfully wrote data for %s.", tank['Location'])
         logger.info("Writing data to JSON file...")
+
+        # Write data to JSON file
         try:
-            dl.write_to_json(f"{Settings.EXPORT_FOLDER}/{tank['Location']}.txt",
-                             f"{Settings.JSON_EXPORT_FOLDER}/{tank['Location']}.json")
+            with open(export_text_file, "r", encoding='utf-8') as file:
+                content = file.read()
+                parsed_json = dl.parse_full_string(content, tank['Command'])
+                added_args = {"site": tank['Location']}
+                added_args.update(parsed_json)
+                dl.write_to_json_from_dict(added_args, export_json_file)
+            # dl.write_to_json(f"{Settings.EXPORT_FOLDER}/{tank['Location']}.txt",
+            #                  f"{Settings.JSON_EXPORT_FOLDER}/{tank['Location']}.json")
             success_count += 1
         except CriticalError as e:
             logger.critical("Critical Error: %s", e)
